@@ -1153,6 +1153,7 @@
                         if(data){
                             //if the chart exists on the scope, do not call addGraph again, update data and call the chart.
                             if(scope.chart){
+                                scope.chart.color( scope.color() );
                                 return scope.d3Call(data, scope.chart);
                             }
                             nv.addGraph({
